@@ -21,3 +21,5 @@ Instale as dependências
 ```bash
     pip install nltk numpy tflearn tensorflow
 ```
+
+https://github.com/gunthercox/chatterbot-corpus/tree/master/chatterbot_corpus/data/portuguese
