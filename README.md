@@ -2,6 +2,18 @@
 
 Projeto Final da Disciplina de Inteligência Artificial do curso de Sistemas de Informação - UNIMONTES
 
+## Base do Projeto - Tutorial Tech With Tim
+
+This deep learning chatbot tutorial will show you how to use our previously created chatbot model to make predictions and chat back and forth with our user.
+
+- [Text-Based Tutorial](https://www.techwithtim.net/tutorials/ai-chatbot/)
+
+- [Playlist](https://www.youtube.com/watch?v=wypVcNIH6D4&list=PLzMcBGfZo4-ndH9FoC4YWHGXG5RZekt-Q)
+
+- [References](https://chatbotsmagazine.com/contextual-chat-bots-with-tensorflow-4391749d0077)
+
+- [Base da tradução](https://github.com/gunthercox/chatterbot-corpus/tree/master/chatterbot_corpus/data/portuguese)
+
 # Instalação
 
 Para concluir a instalação é preciso ter instalado em sua máquina o [Anaconda](https://www.anaconda.com/)
@@ -49,5 +61,3 @@ Rode o programa:
 ```bash
     python main.py
 ```
-
-https://github.com/gunthercox/chatterbot-corpus/tree/master/chatterbot_corpus/data/portuguese
