@@ -1,3 +1,4 @@
+import os
 import pickle
 import json
 import random
@@ -74,8 +75,47 @@ net = tflearn.regression(net)
 
 model = tflearn.DNN(net)
 
-try:
+if os.path.exists("model.tflearn.meta"):
     model.load("model.tflearn")
-except:
+else:
     model.fit(training, output, n_epoch=1000, batch_size=8, show_metric=True)
     model.save("model.tflearn")
+
+
+def bag_of_words(s, words):
+    bag = [0 for _ in range(len(words))]
+
+    s_words = nltk.word_tokenize(s)
+    s_words = [stemmer.stem(word.lower()) for word in s_words]
+
+    for se in s_words:
+        for i, w in enumerate(words):
+            if w == se:
+                bag[i] = 1
+
+    return numpy.array(bag)
+
+
+def chat():
+    print("Start talking with the Bot (type quit to stop)!")
+    while True:
+        inp = input("You: ")
+        if inp.lower() == "quit":
+            break
+
+        results = model.predict([bag_of_words(inp, words)])[0]
+        results_index = numpy.argmax(results)
+        tag = labels[results_index]
+
+        if results[results_index] > 0.7:
+            for tg in data["intents"]:
+                if tg["tag"] == tag:
+                    responses = tg["responses"]
+
+            print("Bot: " + random.choice(responses))
+        else:
+            print(
+                "Bot: I don't quite understand. Ask a different question.")
+
+
+chat()
