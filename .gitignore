@@ -1,1 +1,5 @@
-/.vscode
+*
+!intents.json
+!main.py
+!README.MD
+!.gitignore
