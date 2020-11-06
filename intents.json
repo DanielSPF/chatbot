@@ -3,78 +3,87 @@
     {
       "tag": "greeting",
       "patterns": [
-        "Hi",
-        "How are you",
-        "Is anyone there?",
-        "Hello",
-        "Good day",
-        "Whats up",
-        "My name is"
+        "Oi",
+        "Como vai você?",
+        "Tem alguém ai?",
+        "Olá",
+        "Bom dia",
+        "E ai?",
+        "Meu nome é"
       ],
       "responses": [
-        "Hello!",
-        "Good to see you again!",
-        "Hi there, how can I help?"
+        "Olá!",
+        "Bom te ver de novo!",
+        "E ai, como eu posso ajudar?"
       ],
       "context_set": ""
     },
     {
       "tag": "goodbye",
       "patterns": [
-        "cya",
-        "See you later",
-        "Goodbye",
-        "I am Leaving",
-        "Have a Good day",
-        "Bye"
+        "Adeus",
+        "Até mais",
+        "Tchau",
+        "Eu tenho que sair",
+        "Tenha um bom dia",
+        "Eu vou sair"
       ],
-      "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"],
+      "responses": [
+        "Até mais!",
+        "Adeus!",
+        "Tchau!",
+        "Tudo bem, até mais tarde!"
+      ],
       "context_set": ""
     },
     {
       "tag": "age",
-      "patterns": [
-        "how old",
-        "how old is tim",
-        "what is your age",
-        "how old are you",
-        "age?"
+      "patterns": ["Quantos anos?", "Qual a sua idade?", "idade?"],
+      "responses": [
+        "Eu tenho algumas horas de vida.",
+        "Não sei te dizer, acredito que sou jovem!"
       ],
-      "responses": ["I am 18 years old!", "18 years young!"],
       "context_set": ""
     },
     {
       "tag": "name",
       "patterns": [
-        "what is your name",
-        "what should I call you",
-        "whats your name?"
+        "Qual é o seu nome?",
+        "Como eu posso chamar você?",
+        "Seu nome?",
+        "Você tem um nome?"
       ],
-      "responses": ["You can call me Maria.", "I'm Maria!"],
+      "responses": [
+        "Você pode me chamar de Maria.",
+        "Eu sou Maria!",
+        "Meu nome é Maria."
+      ],
       "context_set": ""
     },
     {
       "tag": "shop",
       "patterns": [
-        "Id like to buy something",
-        "whats on the menu",
-        "what do you reccommend?",
-        "could i get something to eat"
+        "Eu gostaria de comprar algo",
+        "O que tem no cardápio?",
+        "O que você recomenda?",
+        "O que tem para comer?"
       ],
       "responses": [
-        "We sell chocolate chip cookies for $2!",
-        "Cookies are on the menu!"
+        "Temos biscoitos de chocolates por R$ 2 reais!",
+        "Temos biscoitos para o cardápio!"
       ],
       "context_set": ""
     },
     {
       "tag": "hours",
       "patterns": [
-        "when are you guys open",
-        "what are your hours",
-        "hours of operation"
+        "Quando você estão abertos?",
+        "Qual o horário de funcionamento?",
+        "Horário de funcionamento?"
       ],
-      "responses": ["We are open 7am-4pm Monday-Friday!"],
+      "responses": [
+        "Nós estamos abertos de 7 da manhã às 4 da tarde de Segunda a Sexta!"
+      ],
       "context_set": ""
     }
   ]
