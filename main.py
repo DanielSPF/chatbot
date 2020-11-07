@@ -74,8 +74,8 @@ except:  # Preenche os dados para treinar a rede
     """
         Uma vez que as entradas e saídas foram convertidas elas são salvas para não precisar converter novamente.
     """
-    # with open("data.pickle", "wb") as f:
-    #pickle.dump((words, labels, training, output), f)
+    with open("data.pickle", "wb") as f:
+        pickle.dump((words, labels, training, output), f)
 
 # Limpa a pilha de gráficos padrão e redefine o gráfico padrão global do tensorflow.
 tensorflow.reset_default_graph()
@@ -95,7 +95,7 @@ if os.path.exists("model.tflearn.meta"):
     model.load("model.tflearn")
 else:  # Treina a Deep Neural Network
     model.fit(training, output, n_epoch=1000, batch_size=8, show_metric=True)
-    # model.save("model.tflearn")  # Salva o modelo
+    model.save("model.tflearn")  # Salva o modelo
 
 
 # Função que converte as entradas fornecidas pelo usuário no chat em 0 e 1
@@ -114,7 +114,14 @@ def bag_of_words(s, words):
 
 
 def chat():  # Função que implementa o chat
-    print("Inicie a conversa com o Bot (digite sair para parar)!")
+    print(" ")
+    print("|------------------------------------------------------")
+    print("| Inicie a conversa com o Bot (Digite sair para parar)!")
+    print("|------------------------------------------------------")
+    print("| Obs: Digite uma mensagem e tecle enter!")
+    print("|")
+    print(" ")
+
     while True:
         inp = input("Você: ")
         if inp.lower() == "sair":
@@ -129,10 +136,14 @@ def chat():  # Função que implementa o chat
                 if tg["tag"] == tag:
                     responses = tg["responses"]
 
+            print(" ")
             print("Bot: " + random.choice(responses))
+            print(" ")
         else:
+            print(" ")
             print(
-                "Bot: Me desculpe, não sei te dizer! Tente novamente ou pergunte outra coisa. :)")
+                "Bot: Me desculpe, não entendi! Tente novamente ou pergunte outra coisa. :)")
+            print(" ")
 
 
 chat()
