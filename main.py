@@ -1,3 +1,4 @@
+from nltk.stem import RSLPStemmer
 import os
 import pickle
 import json
@@ -6,9 +7,10 @@ import tensorflow
 import tflearn
 import numpy
 import nltk
-from nltk.stem import RSLPStemmer
+nltk.download('rslp')
 stemmer = RSLPStemmer()
 nltk.download('punkt')
+
 
 # Abre o json
 with open("intents.json") as file:
@@ -72,8 +74,8 @@ except:  # Preenche os dados para treinar a rede
     """
         Uma vez que as entradas e saídas foram convertidas elas são salvas para não precisar converter novamente.
     """
-    with open("data.pickle", "wb") as f:
-        pickle.dump((words, labels, training, output), f)
+    # with open("data.pickle", "wb") as f:
+    #pickle.dump((words, labels, training, output), f)
 
 # Limpa a pilha de gráficos padrão e redefine o gráfico padrão global do tensorflow.
 tensorflow.reset_default_graph()
@@ -93,7 +95,7 @@ if os.path.exists("model.tflearn.meta"):
     model.load("model.tflearn")
 else:  # Treina a Deep Neural Network
     model.fit(training, output, n_epoch=1000, batch_size=8, show_metric=True)
-    model.save("model.tflearn")  # Salva o modelo
+    # model.save("model.tflearn")  # Salva o modelo
 
 
 # Função que converte as entradas fornecidas pelo usuário no chat em 0 e 1
@@ -130,7 +132,7 @@ def chat():  # Função que implementa o chat
             print("Bot: " + random.choice(responses))
         else:
             print(
-                "Bot: Eu não entendi. Pergunte outra coisa.")
+                "Bot: Me desculpe, não sei te dizer! Tente novamente ou pergunte outra coisa. :)")
 
 
 chat()
