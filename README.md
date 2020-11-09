@@ -38,7 +38,7 @@ Acesse a pasta do projeto:
    cd chatbot/
 ```
 
-Crie o ambiente:
+Crie o ambiente virtual:
 
 ```bash
     conda create -n chatbot python=3.6
