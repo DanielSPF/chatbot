@@ -12,11 +12,9 @@ This deep learning chatbot tutorial will show you how to use our previously crea
 
 - [References](https://chatbotsmagazine.com/contextual-chat-bots-with-tensorflow-4391749d0077)
 
-- [Base da tradução](https://github.com/gunthercox/chatterbot-corpus/tree/master/chatterbot_corpus/data/portuguese)
-
 # Instalação
 
-Para concluir a instalação é preciso ter instalado em sua máquina o [Anaconda](https://www.anaconda.com/)
+Para concluir a instalação é preciso ter instalado em sua máquina o [Anaconda](https://www.anaconda.com/) e como Editor de Texto foi usado o [VS Code](https://code.visualstudio.com/).
 
 Clone o repositório:
 
